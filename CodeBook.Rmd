@@ -1,0 +1,41 @@
+---
+title: 'CodeBook: UCI HAR Data'
+output: html_document
+---
+
+###About the data
+
+These data were produced by experiments carried out with a group of 30 
+volunteers aged 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) while 
+wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity. For each subject the data includes:
+
+- A 561-feature vector with time and frequency domain variables. 
+
+- An activity label. 
+
+- An identifier of the subject who carried out the experiment.
+
+###About the analysis:
+
+The 'run_analysis.R' files does the following
+
+1. Reads in data files, renaming variables where possible 
+(excluding features)
+
+2. Recodes the activity values to reflect the activity, as specified in 
+'activity_labels.txt'
+
+3. Renames the features to reflect the actual measure names, as specified
+in 'features.txt'
+
+4. Merges the training and the test sets to create one data set.
+
+5. Creates new data set from the one created in step 4, containing subID, 
+activity, and only those features with "mean" or "std" in their name; writes
+this to HAR_tidy.csv
+
+
+
+
+
+
